@@ -29,13 +29,6 @@ When JavaScript runs, it processes code in two phases:
 - **`var`**:  
   Variables declared with `var` are hoisted and initialized with `undefined`. Unlike `let` and `const`, `var` does not go into the TDZ.  
 
-#### What is the Temporal Dead Zone (TDZ)?  
-The **TDZ** is the period between the hoisting of a variable and its initialization. During this period, accessing the variable will throw a `ReferenceError`.  
-```javascript  
-console.log(x); // ReferenceError  
-let x = 10; // TDZ ends here  
-console.log(x); // 10  
-
 ### 1. Function Hoisting  
 - **`Function Decleration`**:  
   `Function declaration` are fully hoisted, meaning their name and body are available throughout the Scope.  
@@ -46,4 +39,12 @@ console.log(x); // 10
 
 ### 1. Class Hoisting  
     class decleration are hoisted but reamin in TDZ, like let and const.
+
+#### What is the Temporal Dead Zone (TDZ)?  
+The **TDZ** is the period between the hoisting of a variable and its initialization. During this period, accessing the variable will throw a `ReferenceError`.  
+```javascript  
+console.log(x); // ReferenceError  
+let x = 10; // TDZ ends here  
+console.log(x); // 10  
+
 
